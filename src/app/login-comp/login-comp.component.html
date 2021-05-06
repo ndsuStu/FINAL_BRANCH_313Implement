@@ -1,0 +1,40 @@
+<div *ngIf = "(this.viewControl.isCust == -1) && (this.viewControl.isEmp == false)">
+    <span class="first">
+    <label for="acctNum">Account Number: </label>
+    <input id="acctNum" [(ngModel)]="acctNumber"/>
+
+    <label for="pass">Password: </label>
+    <input id="pass" [(ngModel)]="password"/>
+
+    <button (click)="loginCust()">Login</button>
+</span>
+<!-- =================================================================== -->
+&nbsp;
+
+
+<span class="second">
+    <label for="empLog">Employee Login: </label>
+    <!-- <input id="empNum" [(ngModel)]="empNum"/> -->
+    <input id="empNum"/>
+
+    <label for="pass">Password: </label>
+    <input id="empLog" [(ngModel)]="empPassword"/>
+
+    <button (click)="loginEmp()">Login</button>
+</span>
+
+</div>
+
+<div *ngIf = "!(this.viewControl.isCust == -1)">
+    Welcome customer {{this.viewControl.isCust}}
+</div>
+
+<div *ngIf = "!(this.viewControl.isEmp == false)">
+    Welcome Employee
+</div>
+
+<div id="error">
+    <strong>{{errorMessage}}</strong>
+</div>
+
+<br>
