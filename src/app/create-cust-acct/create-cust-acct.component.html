@@ -1,0 +1,19 @@
+<div>
+
+    <label for="first-name">First name: </label>
+    <input id="first-name" [(ngModel)]="firstName"/>
+    <br />
+    <label for="last-name">Last name: </label>
+    <input id="last-name" [(ngModel)]="lastName"/>
+    <br />
+    <label for="card-number">Credit Card: </label>
+    <input id="card-number" type="string" [(ngModel)]="card"/>
+
+    <label for="passw">Password: </label>
+    <input id="passw" type="string" [(ngModel)]="passw"/>
+
+    Your Account Number is: {{nextid}}
+
+</div>
+<button (click)="addAccount()">Add Account</button>
+<button (click)="returnToAppView()">Cancel</button>
