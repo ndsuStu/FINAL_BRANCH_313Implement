@@ -1,0 +1,16 @@
+div{
+    border: 1px solid slategrey;
+    background-color: aqua;
+}
+
+.first{
+    text-align: left;
+}
+
+.second{
+    padding-left: 5rem;
+}
+
+#error{
+    color: red;
+}
